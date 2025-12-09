@@ -51,6 +51,11 @@
 
           - name: Build project
             run: npm run build # Собираем проект для деплоя
+          
+          - name: Configure Git
+            run: |
+                git config --global user.name "korolevsec"
+                git config --global user.email "korolevma@tksu.ru"
 
           - name: Deploy to GitHub Pages
             run: npm run deploy # Запускаем скрипт деплоя gh-pages
